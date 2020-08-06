@@ -2,7 +2,7 @@
  * Created by tushar on 30/12/17.
  */
 
-import minimist = require('minimist')
+import minimist from "minimist"
 import * as R from 'ramda'
 
 type ProcessArgv = {
