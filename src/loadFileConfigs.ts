@@ -4,10 +4,10 @@
  * Created by tushar on 30/12/17.
  */
 import * as fs from 'fs'
-import * as R from 'ramda'
-import {configPaths, ConfigTypes, NonConfigEnv} from './configPaths'
+import R from 'ramda'
+import { configPaths, ConfigTypes, NonConfigEnv } from './configPaths.js'
 
-export type Configurations<T> = {[key in keyof T]: any}
+export type Configurations<T> = { [key in keyof T]: any }
 
 /**
  * Loads the configs provided in the {ConfigPaths}
@@ -15,6 +15,7 @@ export type Configurations<T> = {[key in keyof T]: any}
  * @param process {Process}
  * @return {defaultConfig, envConfig, deploymentConfig, userConfig}
  */
+
 export const loadFileConfigs = <T extends NonConfigEnv>(
   process: T
 ): Configurations<ConfigTypes> => {

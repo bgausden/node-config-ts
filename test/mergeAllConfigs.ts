@@ -1,6 +1,6 @@
 import * as assert from 'assert'
 import * as path from 'path'
-import {mergeAllConfigs} from '../src/mergeAllConfigs'
+import { mergeAllConfigs } from '../src/mergeAllConfigs.js'
 
 describe('mergeAllConfigs()', () => {
   it('should load configs from all the places', () => {

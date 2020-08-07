@@ -2,7 +2,7 @@
  * Created by tushar on 10/01/18.
  */
 
-import * as R from 'ramda'
+import R from 'ramda'
 
 const getVarName = R.replace('@@', '')
 const hasEnvVar = R.test(/^@@.*$/)

@@ -1,4 +1,4 @@
-import * as R from 'ramda'
+import R from 'ramda'
 
 /**
  * Merges the configs in the following order —
@@ -7,7 +7,7 @@ import * as R from 'ramda'
  * @return {any}
  */
 
-export const mergeFileConfigs = (configs: {[key: string]: any}) => {
+export const mergeFileConfigs = (configs: { [key: string]: any }) => {
   return R.reduce(R.mergeDeepRight, configs.defaultConfig, [
     configs.envConfig,
     configs.deploymentConfig,

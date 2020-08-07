@@ -3,7 +3,7 @@
  */
 
 import * as assert from 'assert'
-import {loadCLIConfigs} from '../src/loadCliConfigs'
+import { loadCLIConfigs } from '../src/loadCliConfigs.js'
 
 describe('load-cli-configs', () => {
   it('should load configs from cli', () => {

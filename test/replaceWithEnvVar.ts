@@ -1,7 +1,7 @@
 /**
  * Created by tushar on 10/01/18.
  */
-import {replaceWithEnvVar} from '../src/replaceWithEnvVar'
+import { replaceWithEnvVar } from '../src/replaceWithEnvVar.js'
 import * as assert from 'assert'
 
 describe('replaceWithEnvVar', () => {
@@ -16,7 +16,7 @@ describe('replaceWithEnvVar', () => {
       b: '@@PORT'
     }
     const actual = replaceWithEnvVar(baseConfig, process)
-    const expected = {...baseConfig, b: '5050'}
+    const expected = { ...baseConfig, b: '5050' }
     assert.deepEqual(actual, expected)
   })
 
@@ -34,7 +34,7 @@ describe('replaceWithEnvVar', () => {
       }
     }
     const actual = replaceWithEnvVar(baseConfig, process)
-    const expected = {a: {b: {c: '5050'}}}
+    const expected = { a: { b: { c: '5050' } } }
     assert.deepEqual(actual, expected)
   })
 })

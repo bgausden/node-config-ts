@@ -2,7 +2,7 @@
  * Created by tushar on 30/12/17.
  */
 import * as assert from 'assert'
-import {configPaths} from '../src/configPaths'
+import { configPaths } from '../src/configPaths.js'
 
 describe('config-paths', () => {
   describe('default', () => {
@@ -21,7 +21,7 @@ describe('config-paths', () => {
   describe('ENV:NODE_ENV', () => {
     it('should return actual config path', () => {
       const process = {
-        env: {NODE_ENV: 'production'},
+        env: { NODE_ENV: 'production' },
         cwd: () => '/app/www.bravo.com/server'
       }
       const actual = configPaths(process).envConfig
@@ -44,7 +44,7 @@ describe('config-paths', () => {
   describe('DEPLOYMENT', () => {
     it('should return actual config path', () => {
       const process = {
-        env: {DEPLOYMENT: 'www.example.com'},
+        env: { DEPLOYMENT: 'www.example.com' },
         cwd: () => '/app/www.bravo.com/server'
       }
       const actual = configPaths(process).deploymentConfig
@@ -69,7 +69,7 @@ describe('config-paths', () => {
   describe('USER', () => {
     it('should return actual config path', () => {
       const process = {
-        env: {USER: 'root'},
+        env: { USER: 'root' },
         cwd: () => '/app/www.bravo.com/server'
       }
       const actual = configPaths(process).userConfig
@@ -92,7 +92,7 @@ describe('config-paths', () => {
   describe('USERNAME', () => {
     it('should return actual config path', () => {
       const process = {
-        env: {USERNAME: 'root'},
+        env: { USERNAME: 'root' },
         cwd: () => '/app/www.bravo.com/server'
       }
       const actual = configPaths(process).userConfig
@@ -115,7 +115,7 @@ describe('config-paths', () => {
   describe('ENV:NODE_CONFIG_DIR', () => {
     it('should set base config dir', () => {
       const process = {
-        env: {NODE_ENV: 'production', NODE_CONFIG_TS_DIR: './/main/config'},
+        env: { NODE_ENV: 'production', NODE_CONFIG_TS_DIR: './/main/config' },
         cwd: () => '/root'
       }
 

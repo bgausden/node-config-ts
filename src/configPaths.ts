@@ -3,7 +3,7 @@
  */
 
 import * as path from 'path'
-import {baseConfigPath} from './baseConfigPath'
+import { baseConfigPath } from './baseConfigPath.js'
 
 const DEFAULT_FILENAME = 'default'
 
@@ -40,13 +40,13 @@ export const configPaths = <T extends NonConfigEnv>(
   const deploymentConfig = path.resolve(
     process.cwd(),
     `${baseDIR}/deployment/${process.env['DEPLOYMENT'] ||
-      DEFAULT_FILENAME}.json`
+    DEFAULT_FILENAME}.json`
   )
   const userConfig = path.resolve(
     process.cwd(),
     `${baseDIR}/user/${process.env['USER'] ||
-      process.env['USERNAME'] ||
-      DEFAULT_FILENAME}.json`
+    process.env['USERNAME'] ||
+    DEFAULT_FILENAME}.json`
   )
-  return {defaultConfig, envConfig, deploymentConfig, userConfig}
+  return { defaultConfig, envConfig, deploymentConfig, userConfig }
 }
