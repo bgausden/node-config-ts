@@ -16,7 +16,7 @@
     "travis-deploy-once": "travis-deploy-once",
     "lint": "tslint --project .",
     "prettier": "git ls-files | grep -E '.*\\.(ts|md|json)$' | xargs prettier --write --config=.prettierrc",
-    "test": "mocha"
+    "test": "node --experimental-json-modules node_modules/mocha/bin/_mocha"
   },
   "bin": "./bin/cli",
   "devDependencies": {
@@ -46,5 +46,6 @@
   "license": "MIT",
   "resolutions": {
     "chokidar": "^3.4.0"
-  }
+  },
+  "type": "module"
 }
